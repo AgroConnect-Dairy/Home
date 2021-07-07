@@ -1,0 +1,71 @@
+{
+  "data": [{
+    "dairyCompany": {
+      "dairyCompanyIdentifier": {
+        "scheme": " ",       
+        "id": " "
+      },
+      "dairyCompanySecondaryIdentifier": {
+        "scheme": " ",
+        "id": " "
+      },
+      "milkProductionLocation": [
+        {
+          "milkProductionLocationIdentifier": {
+            "scheme": " ",
+            "id": " "
+          },
+            "milkProductionLocationSecondaryIdentifier": {
+            "scheme": " ",
+            "id": " "
+          },
+          "milkProductionLocationSecondaryIdentifiers": [
+          {
+            "scheme": " ",
+            "id": " "
+          }
+         ],
+          "milkTank": [
+            {
+              "milkTankIdentifier": {
+                "scheme": " ",
+                "id": " "
+              },
+              "milkQualitySample": [
+                {
+                  "milkQualityID": " ",
+                  "milkQualityDateTime": " ",
+                  "milkQualityDelInd": " ",
+                  "milkQualityStatusCode": " ",
+                  "milkDeliveryReferenceID": " ",
+                  "milkQualityPenaltyPoints": " ",
+                  "milkQualityExtraPenaltyPoints": " ",
+                  "milkQualityRemark": " ",
+                  "qualityLine": [
+                    {
+                      "qualityCharacteristicCodeType": " ",
+                      "qualityCharacteristicDelInd": " ",
+                      "qualityCharacteristicValue": " ",
+                      "qualityCharacteristicUnit": " ",
+                      "qualityCharacteristicDescription": " ",
+                      "milkQualityLinePenaltyPoints": " ",
+                      "milkQualityLinePenaltyExtraPoints": " ",
+                      "milkQualityLineStatusCode": " ",
+                      "milkQualityLineRemark": " ",
+                      "milkQualityLineCalculatedIndicatorCode": " "
+                    }
+
+                  ]
+                }
+
+              ]
+            }
+           
+          ]
+        }
+   
+      ]
+    }
+   }
+ ] 
+}
