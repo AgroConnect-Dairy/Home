@@ -1,0 +1,57 @@
+{
+  "data": [{
+      "dairyCompany": {
+      "dairyCompanyIdentifier": {
+        "scheme": " ",       
+        "id": " "
+      },
+      "dairyCompanySecondaryIdentifier": {
+        "scheme": " ",
+        "id": " "
+      },
+      "milkProductionLocation": [
+        {
+          "milkProductionLocationIdentifier": {
+            "scheme": " ",
+            "id": " "
+          },
+          "milkProductionLocationSecondaryIdentifier": {
+            "scheme": " ",
+            "id": " "
+          },
+          "milkProductionLocationSecondaryIdentifiers":       [
+                  {
+            "scheme": "",
+            "id": " "
+         },
+                  {
+            "scheme": "",
+            "id": ""
+         }
+      ],
+          "milkProductionLocationCharacteristic": [
+         { "mPL_CharacteristicDomainCode": " ",
+            "mPL_CharacteristicDescription": " ",
+            "mPL_CharacteristicDateTime": " ",
+            "mPL_CharacteristicPeriodStartDate": " ",
+            "mPL_CharacteristicPeriodEndDate": " ",
+            "mPL_CharacteristicDeletionIndicator": "",
+            "milkProductionLocationCharacteristicLine": [
+               {
+                  "mPL_CharacteristicCode": " ",
+                  "mPL_CharacteristicLineDeletionIndicator": "",
+                  "mPL_CharacteristicValue": {
+                     "measurementUnitCode": " ",
+                     "measuredValue": " "
+                  },
+                  "mPL_CharacteristicValueAggregationlevelCode": " "
+               }
+             ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+ ]
+}
