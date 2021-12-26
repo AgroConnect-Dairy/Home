@@ -1,0 +1,78 @@
+{
+  "data": [{
+    "dairyCompany": {
+      "dairyCompanyIdentifier": {
+        "scheme": " ",
+        "id": " "
+      },
+      "dairyCompanySecondaryIdentifier": {
+        "scheme": " ",
+        "id": " "
+      },
+      "milkProductionLocation": [
+        {
+          "milkProductionLocationIdentifier": {
+            "scheme": " ",
+            "id": " "
+          },
+          "milkproductionLocationSecondaryIdentifier": {
+            "scheme": " ",
+            "id": " "
+          },
+		  "invoice": [
+			{
+			  "invoiceID": " ",
+			  "invoiceDateTime": " ",
+			  "invoiceDelInd": " ",
+			  "invoiceDescription": " ",
+			  "currencyCode": " ",
+			  "invoicePeriodId": " ",
+			  "invoicePeriodStartDate": " ",
+			  "invoicePeriodEndDate": " ",
+			  "totalPaymentVatExcluded": " ", 
+			  "totalVat": " ",
+			  "totalPaymentVatIncluded": " ",
+			  "remark": " ",
+			  "invoiceLine": [
+				{
+				  "kindOfPaymentCode": " ",
+				  "dairyCompanyReferenceID": " ",
+				  "itemCode": " ",
+				  "description": " ",
+				  "ledgerAccountNumber": " ",
+				  "quantity": " ",
+				  "quantityUnit": " ",
+				  "milkDeliveryReferenceID": " ",
+				  "paymentPeriodStartDate": " ",
+				  "paymentPeriodEndDate": " ",
+				  "pricePerUnitVatExcluded": " ",
+				  "unitForPricePerUnitCode": " ",
+				  "unitBaseQuantity": " ",
+				  "discountPer100Ltr": " ",
+				  "amountVatExcluded": " ",
+				  "vatPercentage": " ",
+				  "vatAmount": " ",
+				  "amountVatIncluded": " ",
+				  "remark": " ",
+				  "invoiceReferencedCharacteristic": [
+					{
+					  "invoiceRefererencedCharacteristicCode": " ",
+					  "invoiceCharacteristicValue": " ",
+					  "invoiceCharacteristicUnit": " ",
+					  "invoiceCharacteristicDescription": " ",
+					  "invoiceCharacteristicVolume": " ",
+					  "invoiceCharacteristicVolumeUnit": " ",
+					  "invoiceCharacteristicWeight": " ",
+					  "invoiceCharacteristicWeightUnit": " "
+					}
+				  ]
+				}
+			  ]
+			}
+		  ]
+        }
+      ]
+    }
+  }
+ ] 
+}
