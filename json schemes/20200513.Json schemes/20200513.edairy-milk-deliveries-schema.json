@@ -1,0 +1,236 @@
+{
+    "milkDeliveriesType":{
+        "type":"array",
+        "items":{
+            "$ref":"#/components/schemas/milkDeliveryType"
+        }
+    },
+    "milkDeliveryType":{
+        "type":"object",
+        "description":"Gives information about a milk delivery of a farmer to a dairy company.",
+        "properties":{
+            "dairyCompany":{
+                "type":"object",
+                "properties":{
+                    "dairyCompanyIdentifier":{
+                        "$ref":"#/components/schemas/companyIdentifier"
+                    },
+                    "dairyCompanySecondaryIdentifier":{
+                        "$ref":"#/components/schemas/companyIdentifier"
+                    },
+                    "milkProductionLocation":{
+                        "type":"array",
+                        "items":{
+                            "$ref":"#/components/schemas/milkProductionLocationDelivery"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "milkProductionLocationDelivery":{
+        "description":"Location where the milk is produced",
+        "type":"object",
+        "properties":{
+            "milkProductionLocationIdentifier":{
+                "$ref":"#/components/schemas/locationIdentifier"
+            },
+            "milkProductionLocationSecondaryIdentifier":{
+                "$ref":"#/components/schemas/companyIdentifier"
+            },
+            "milkTank":{
+                "type":"array",
+                "items":{
+                    "$ref":"#/components/schemas/milkTankDelivieries"
+                }
+            }
+        }
+    },
+    "milkTankDelivieries":{
+        "type":"object",
+        "properties":{
+            "milkTankIdentifier":{
+                "$ref":"#/components/schemas/milkTankIdentifier"
+            },
+            "milkDelivery":{
+                "type":"array",
+                "items":{
+                    "$ref":"#/components/schemas/milkDelivery"
+                }
+            }
+        }
+    },
+    "companySecondaryIdentifier":{
+        "description":"A secondary identifier for a company",
+        "type":"object",
+        "properties":{
+            "secondaryIdentifierDescription":{
+                "description":"The description of secondary identifier used, i.e. BRS",
+                "type":"string"
+            },
+            "secondaryIdentifierValue":{
+                "description":"The value for the secondary identifier.",
+                "type":"string"
+            }
+        }
+    },
+    "milkTankIdentifier":{
+        "description":"Nationally unique identifier to describe a single milktank",
+        "type":"object",
+        "properties":{
+            "scheme":{
+                "description":"Scheme used to identify a milktank",
+                "type":"string",
+                "enum":[
+                    "nl.ftn"
+                ]
+            },
+            "id":{
+                "description":"ID used to identify a unique milktank, should include factorycode",
+                "type":"string"
+            }
+        }
+    },
+    "milkDeliveredQuantity":{
+        "description":"Quantity of the milk delivered",
+        "type":"object",
+        "properties":{
+            "value":{
+                "type":"number",
+                "format":"double"
+            },
+            "unitCode":{
+                "type":"string",
+                "description":"UN/CEFACT Common Code for Units of Measurement.",
+                "enum":[
+                    "KGM",
+                    "LTR"
+                ]
+            }
+        }
+    },
+    "milkDelivery":{
+        "type":"object",
+        "properties":{
+            "milkDeliveryId":{
+                "description":"Unique identifier for a milk delivery",
+                "type":"string"
+            },
+            "milkDeliveryDateTime":{
+                "description":"Date-time of the milk delivery",
+                "type":"string",
+                "format":"date-time"
+            },
+            "milkDeliveredQuantity":{
+                "type":"array",
+                "items":{
+                    "$ref":"#/components/schemas/milkDeliveredQuantity"
+                }
+            },
+            "factorLitresToKilogram":{
+                "description":"Factor used to transpose between litres and kilograms",
+                "type":"number",
+                "format":"double"
+            },
+            "milkTemperature":{
+                "description":"Temperature of the milk delivered",
+                "type":"object",
+                "properties":{
+                    "value":{
+                        "type":"number",
+                        "format":"double"
+                    },
+                    "unitCode":{
+                        "type":"string",
+                        "description":"UN/CEFACT Common Code for Units of Measurement.",
+                        "enum":[
+                            "CEL"
+                        ]
+                    }
+                }
+            },
+            "remark":{
+                "description":"Any remarks regarding the milk delivery",
+                "type":"string"
+            },
+            "quantityLine":{
+                "type":"array",
+                "items":{
+                    "$ref":"#/components/schemas/quantityLine"
+                }
+            }
+        }
+    },
+    "quantityLine":{
+        "properties":{
+            "quantityCharacteristicCode":{
+                "type":"string"
+            },
+            "quantityCharacteristicValue":{
+                "type":"string"
+            },
+            "quantityCharacteristicUnit":{
+                "type":"string"
+            },
+            "quantityCharacteristicDescription":{
+                "type":"string"
+            }
+        }
+    },
+    "companyIdentifier":{
+        "type":"object",
+        "description":"Identifies a company",
+        "properties":{
+            "id":{
+                "$ref":"#/components/schemas/companyId"
+            },
+            "scheme":{
+                "$ref":"#/components/schemas/companyIdScheme"
+            }
+        },
+        "required":[
+            "id",
+            "scheme"
+        ]
+    },
+    "companyId":{
+        "type":"string",
+        "description":"A string which (in combination with a scheme) uniquely identifies a company."
+    },
+    "companyIdScheme":{
+        "type":"string",
+        "description":"Identifies the used scheme for a company identification string.",
+        "enum":[
+            "nl.kvk",
+            "be.onn"
+        ]
+    },
+    "locationId":{
+        "type":"string",
+        "description":"A string which (in combination with a scheme) uniquely identifies a location."
+    },
+    "locationScheme":{
+        "type":"string",
+        "description":"Identifies the used scheme for a location identification string.",
+        "enum":[
+            "nl.ubn",
+            "be.pen"
+        ]
+    },
+    "locationIdentifier":{
+        "type":"object",
+        "description":"Identifies a company",
+        "properties":{
+            "id":{
+                "$ref":"#/components/schemas/locationId"
+            },
+            "scheme":{
+                "$ref":"#/components/schemas/locationScheme"
+            }
+        },
+        "required":[
+            "id",
+            "scheme"
+        ]
+    }
+}
