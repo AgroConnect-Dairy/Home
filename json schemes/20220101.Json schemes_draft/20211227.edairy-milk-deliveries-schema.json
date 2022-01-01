@@ -1,0 +1,361 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"additionalProperties": false,
+	"definitions": {
+		".dataDelivery": {
+			"$ref": "#/definitions/dataDelivery"
+		},
+		"dairyCompany": {
+			"additionalProperties": false,
+			"description": "The dairy company that processes the milk.",
+			"properties": {
+				"dairyCompanyIdentifier": {
+					"$ref": "#/definitions/partyIdType",
+					"description": "Within the scope of this data exchange, unique identifier of this dairy company.\nIn the Netherlands: Fabrieksnummer."
+				},
+				"dairyCompanySecondaryIdentifier": {
+					"items": {
+						"$ref": "#/definitions/partyIdType",
+						"description": "The option to add an extra, secondary, identifier of this dairy company, e.g. a GLN."
+					},
+					"type": "array"
+				},
+				"milkProductionLocation": {
+					"items": {
+						"$ref": "#/definitions/milkProductionLocation"
+					},
+					"minItems": 1,
+					"type": "array"
+				}
+			},
+			"required": [
+				"dairyCompanyIdentifier",
+				"milkProductionLocation"
+			],
+			"type": "object"
+		},
+		"dataDelivery": {
+			"additionalProperties": false,
+			"properties": {
+				"dairyCompany": {
+					"items": {
+						"$ref": "#/definitions/dairyCompany"
+					},
+					"minItems": 1,
+					"type": "array"
+				}
+			},
+			"required": [
+				"dairyCompany"
+			],
+			"type": "object"
+		},
+		"measurementType": {
+			"additionalProperties": false,
+			"description": "Standard data type for expressing the value of a measurement. To be used for all types of measurement in this class model.",
+			"properties": {
+				"unitCode": {
+					"additionalProperties": false,
+					"description": "The code that refers to the standard unit or dimension to express the value of theis measurement. E.g. KGM for kilogram.",
+					"properties": {
+						"$": {
+							"$ref": "#/definitions/measurementUnitCodeType"
+						}
+					},
+					"type": "object"
+				},
+				"value": {
+					"additionalProperties": false,
+					"description": "Expresses the measured value of the measurement.",
+					"properties": {
+						"$": {
+							"$ref": "#/definitions/xs:float"
+						}
+					},
+					"type": "object"
+				}
+			},
+			"required": [
+				"unitCode",
+				"value"
+			],
+			"type": "object"
+		},
+		"measurementUnitCodeType": {
+			"description": "listID = CL020 \n------------------------------ \nKGM = kilogram \nLTR = liter \nNBR = number (aantal) \nGL = gram per liter \nGRM100GRM = gram per 100 gram \nCEL = degree Celsius \nP1 = percent \nM1 = milligram per liter \nMGM100GRM = milligram per 100 gram \nNBRKGM = aantal per kilogram",
+			"enum": [
+				"KGM",
+				"LTR",
+				"NBR",
+				"GL",
+				"GRM100GRM",
+				"CEL",
+				"P1",
+				"M1",
+				"MGM100GRM",
+				"NBRKGM"
+			],
+			"type": "string"
+		},
+		"milkDelivery": {
+			"additionalProperties": false,
+			"description": "Milk delivery event, meaning the emptying of the milk tank of this milk production location. The milk is taken from the milk tank and delivered to the dairy company to be processed.\nIn the Netherlands: a visit of a RMO.",
+			"properties": {
+				"factorLitersToKilogram": {
+					"additionalProperties": false,
+					"description": "Factor to  convert a quantity of milk expressed in litres into a quantity of milk expressed in kilograms.",
+					"properties": {
+						"$": {
+							"$ref": "#/definitions/xs:float"
+						}
+					},
+					"type": "object"
+				},
+				"milkDeliveredQuantity": {
+					"items": {
+						"$ref": "#/definitions/measurementType",
+						"description": "The within this event, delivered quantity of milk.\nCan be expressed in litres and/or in kilograms."
+					},
+					"minItems": 1,
+					"type": "array"
+				},
+				"milkDeliveryDateTime": {
+					"additionalProperties": false,
+					"description": "Timestamp for this milk delivery.\nIn the Netherlands: ADED 201731. ",
+					"properties": {
+						"$": {
+							"$ref": "#/definitions/xs:dateTime"
+						}
+					},
+					"type": "object"
+				},
+				"milkDeliveryDelInd": {
+					"additionalProperties": false,
+					"description": "Indicator (true, false) that this record should be deleted (true) by the receiving party.",
+					"properties": {
+						"$": {
+							"$ref": "#/definitions/xs:boolean"
+						}
+					},
+					"type": "object"
+				},
+				"milkDeliveryId": {
+					"$ref": "#/definitions/partyIdType",
+					"description": "Within the domain of the dairy company, unique identifier for this milk delivery."
+				},
+				"milkTemperature": {
+					"additionalProperties": false,
+					"description": "The temperature of the delivered milk.",
+					"properties": {
+						"$": {
+							"$ref": "#/definitions/xs:string"
+						}
+					},
+					"type": "object"
+				},
+				"quantityLine": {
+					"items": {
+						"$ref": "#/definitions/quantityLine"
+					},
+					"type": "array"
+				},
+				"remark": {
+					"additionalProperties": false,
+					"description": "A remark concerning this delivery of milk.",
+					"properties": {
+						"$": {
+							"$ref": "#/definitions/xs:string"
+						}
+					},
+					"type": "object"
+				}
+			},
+			"required": [
+				"milkDeliveredQuantity",
+				"milkDeliveryDateTime",
+				"milkDeliveryId"
+			],
+			"type": "object"
+		},
+		"milkProductionLocation": {
+			"additionalProperties": false,
+			"description": "This is the dairy farm.",
+			"properties": {
+				"milkProductionLocationIdentifier": {
+					"$ref": "#/definitions/partyIdType",
+					"description": "For the Netherlands, the primary key of a production location is the UBN.\nFor Belgium it is the Productieëenheidnummer."
+				},
+				"milkProductionLocationSecondaryIdentifier": {
+					"items": {
+						"$ref": "#/definitions/partyIdType",
+						"description": "The option to add an extra, secondary, identifier of this production location."
+					},
+					"type": "array"
+				},
+				"milkTank": {
+					"items": {
+						"$ref": "#/definitions/milkTank"
+					},
+					"minItems": 1,
+					"type": "array"
+				}
+			},
+			"required": [
+				"milkProductionLocationIdentifier",
+				"milkTank"
+			],
+			"type": "object"
+		},
+		"milkTank": {
+			"additionalProperties": false,
+			"description": "The milk tank on a production location.",
+			"properties": {
+				"milkDelivery": {
+					"items": {
+						"$ref": "#/definitions/milkDelivery"
+					},
+					"minItems": 1,
+					"type": "array"
+				},
+				"milkTankIdentifier": {
+					"$ref": "#/definitions/partyIdType",
+					"description": "Unique number of the milk tank of this production location.\nOne production location might have one or more milk tanks. "
+				}
+			},
+			"required": [
+				"milkDelivery",
+				"milkTankIdentifier"
+			],
+			"type": "object"
+		},
+		"partyIdType": {
+			"additionalProperties": false,
+			"description": "Standard data segment for the unique identifier of a party.",
+			"properties": {
+				"id": {
+					"additionalProperties": false,
+					"description": "The value of the party identifier.",
+					"properties": {
+						"$": {
+							"$ref": "#/definitions/xs:string"
+						}
+					},
+					"type": "object"
+				},
+				"scheme": {
+					"additionalProperties": false,
+					"description": "Indicator of what type of identifier is used to identify the party. E.g., a GLN, KvK, customer ID, etc.",
+					"properties": {
+						"$": {
+							"$ref": "#/definitions/xs:string"
+						}
+					},
+					"type": "object"
+				}
+			},
+			"required": [
+				"id",
+				"scheme"
+			],
+			"type": "object"
+		},
+		"qualityCharactericticCodeType": {
+			"description": "Betreft in EDI-Zuivel-oud codelijst MELKONDZ (Qlip-nummers melkonderzoek v27nov17.xls).\n1 = coligetal \n2 = reinheid \n3 = kiemgetal \n4 = chloroform \n5 = boterzuur \n6 = celgetal \n21 = vetgehalte \n22 = eiwitgehalte \n23 = lactosegehalte",
+			"enum": [
+				"1",
+				"2",
+				"3",
+				"4",
+				"5",
+				"6",
+				"21",
+				"22",
+				"23"
+			],
+			"type": "string"
+		},
+		"quantityLine": {
+			"additionalProperties": false,
+			"description": "Optional, more detailed specification about the delivered quantities of the components of  the raw milk (e.g. fat, protein, lactose, etc.).\nCan be expressed ik Kg or in a pecentage. The unit that is to be used (kg or %) is indicated by measurementType.",
+			"properties": {
+				"qualityCharacteristicDescription": {
+					"additionalProperties": false,
+					"description": "Short name of a component of raw milk.",
+					"properties": {
+						"$": {
+							"$ref": "#/definitions/xs:string"
+						}
+					},
+					"type": "object"
+				},
+				"quantityCharacteristicCode": {
+					"additionalProperties": false,
+					"description": "Code, indicating whether it concerns the quantity of fat, protein, lactose, etc.",
+					"properties": {
+						"$": {
+							"$ref": "#/definitions/qualityCharactericticCodeType"
+						}
+					},
+					"type": "object"
+				},
+				"quantityCharacteristicDelInd": {
+					"additionalProperties": false,
+					"description": "True =  this data has been deleted\nFalse = this data has not been deleted",
+					"properties": {
+						"$": {
+							"$ref": "#/definitions/xs:boolean"
+						}
+					},
+					"type": "object"
+				},
+				"quantityCharacteristicUnit": {
+					"additionalProperties": false,
+					"properties": {
+						"$": {
+							"$ref": "#/definitions/xs:string"
+						}
+					},
+					"type": "object"
+				},
+				"quantityCharacteristicValue": {
+					"additionalProperties": false,
+					"description": "The quantity of fat, protein, lactose, etc.",
+					"properties": {
+						"$": {
+							"$ref": "#/definitions/xs:float"
+						}
+					},
+					"type": "object"
+				}
+			},
+			"required": [
+				"quantityCharacteristicCode",
+				"quantityCharacteristicUnit",
+				"quantityCharacteristicValue"
+			],
+			"type": "object"
+		},
+		"xs:boolean": {
+			"type": "boolean"
+		},
+		"xs:dateTime": {
+			"type": "string"
+		},
+		"xs:float": {
+			"type": "number"
+		},
+		"xs:string": {
+			"type": "string"
+		}
+	},
+	"description": "JSON Schema generated by XMLSpy v2017 rel. 3 sp1 (http://www.altova.com)",
+	"properties": {
+		"@xmlns:xs": {
+			"default": "http://www.w3.org/2001/XMLSchema"
+		},
+		"dataDelivery": {
+			"$ref": "#/definitions/.dataDelivery"
+		}
+	},
+	"type": "object"
+}
