@@ -1,0 +1,202 @@
+{
+    "data": [
+        {
+            "dairyCompany": {
+                "dairyCompanyIdentifier": {
+                    "scheme": "nl.cl763",
+                    "id": "001"
+                },
+                "dairyCompanySecondaryIdentifier": {
+                    "scheme": "nl.kvk",
+                    "id": "01070163"
+                },
+                "milkProductionLocation": [
+                    {
+                        "milkProductionLocationIdentifier": {
+                            "scheme": "nl.ftn",
+                            "id": "001123456"
+                        },
+                        "milkProductionLocationSecondaryIdentifier": {
+                            "scheme": "nl.kvk",
+                            "id": "12345678"
+                        },
+                        "milkProductionLocationSecondaryIdentifiers": [
+                            {
+                                "scheme": "nl.kvk",
+                                "id": "12345678"
+                            },
+                            {
+                                "scheme": "nl.ubn",
+                                "id": "1234567"
+                            }
+                        ],
+                        "milkTank": [
+                            {
+                                "milkTankIdentifier": {
+                                    "scheme": "nl.ftn",
+                                    "id": "001123456"
+                                },
+                                "milkQualitySample": [
+                                    {
+                                        "milkQualityID": "0036247710",
+                                        "milkQualityDateTime": "2022-07-02T06:48:43.0000000",
+                                        "milkQualityDelInd": false,
+                                        "milkQualityStatusCode": "1",
+                                        "milkDeliveryReferenceID": "0034615295",
+                                        "milkQualityPenaltyPoints": "00",
+                                        "milkQualityExtraPenaltyPoints": "00",
+                                        "qualityLine": [
+                                            {
+                                                "qualityCharacteristicCodeType": "031",
+                                                "qualityCharacteristicValue": "-",
+                                                "qualityCharacteristicUnit": "",
+                                                "qualityCharacteristicDelInd": false,
+                                                "qualityCharacteristicDescription": "Screening antibiotica",
+                                                "milkQualityLinePenaltyPoints": "00",
+                                                "milkQualityLineStatusCode": "1",
+                                                "milkQualityLineRemark": "000",
+                                                "milkQualityLineCalculatedIndicatorCode": "0"
+                                            },
+                                            {
+                                                "qualityCharacteristicCodeType": "021",
+                                                "qualityCharacteristicValue": "3.77",
+                                                "qualityCharacteristicUnit": "P1",
+                                                "qualityCharacteristicDelInd": false,
+                                                "qualityCharacteristicDescription": "Vet",
+                                                "milkQualityLinePenaltyPoints": "00",
+                                                "milkQualityLineStatusCode": "1",
+                                                "milkQualityLineRemark": "000",
+                                                "milkQualityLineCalculatedIndicatorCode": "0"
+                                            },
+                                            {
+                                                "qualityCharacteristicCodeType": "022",
+                                                "qualityCharacteristicValue": "3.52",
+                                                "qualityCharacteristicUnit": "P1",
+                                                "qualityCharacteristicDelInd": false,
+                                                "qualityCharacteristicDescription": "Eiwit",
+                                                "milkQualityLinePenaltyPoints": "00",
+                                                "milkQualityLineStatusCode": "1",
+                                                "milkQualityLineRemark": "000",
+                                                "milkQualityLineCalculatedIndicatorCode": "0"
+                                            },
+                                            {
+                                                "qualityCharacteristicCodeType": "023",
+                                                "qualityCharacteristicValue": "4.59",
+                                                "qualityCharacteristicUnit": "P1",
+                                                "qualityCharacteristicDelInd": false,
+                                                "qualityCharacteristicDescription": "Lactose",
+                                                "milkQualityLinePenaltyPoints": "00",
+                                                "milkQualityLineStatusCode": "1",
+                                                "milkQualityLineRemark": "000",
+                                                "milkQualityLineCalculatedIndicatorCode": "0"
+                                            },
+                                            {
+                                                "qualityCharacteristicCodeType": "024",
+                                                "qualityCharacteristicValue": "12",
+                                                "qualityCharacteristicUnit": "MGM100GRM",
+                                                "qualityCharacteristicDelInd": false,
+                                                "qualityCharacteristicDescription": "Ureum",
+                                                "milkQualityLinePenaltyPoints": "00",
+                                                "milkQualityLineStatusCode": "1",
+                                                "milkQualityLineRemark": "000",
+                                                "milkQualityLineCalculatedIndicatorCode": "0"
+                                            },
+                                            {
+                                                "qualityCharacteristicCodeType": "025",
+                                                "qualityCharacteristicValue": "0.5",
+                                                "qualityCharacteristicUnit": "",
+                                                "qualityCharacteristicDelInd": false,
+                                                "qualityCharacteristicDescription": "Zuurtegraad vet",
+                                                "milkQualityLinePenaltyPoints": "00",
+                                                "milkQualityLineStatusCode": "1",
+                                                "milkQualityLineRemark": "000",
+                                                "milkQualityLineCalculatedIndicatorCode": "0"
+                                            },
+                                            {
+                                                "qualityCharacteristicCodeType": "030",
+                                                "qualityCharacteristicValue": "-0.517",
+                                                "qualityCharacteristicUnit": "CEL",
+                                                "qualityCharacteristicDelInd": false,
+                                                "qualityCharacteristicDescription": "Vriespunt",
+                                                "milkQualityLinePenaltyPoints": "00",
+                                                "milkQualityLineStatusCode": "1",
+                                                "milkQualityLineRemark": "000",
+                                                "milkQualityLineCalculatedIndicatorCode": "0"
+                                            },
+                                            {
+                                                "qualityCharacteristicCodeType": "094",
+                                                "qualityCharacteristicValue": "12.5",
+                                                "qualityCharacteristicUnit": "P1",
+                                                "qualityCharacteristicDelInd": false,
+                                                "qualityCharacteristicDescription": "Myristinezuur C14:0",
+                                                "milkQualityLinePenaltyPoints": "00",
+                                                "milkQualityLineStatusCode": "1",
+                                                "milkQualityLineRemark": "000",
+                                                "milkQualityLineCalculatedIndicatorCode": "0"
+                                            },
+                                            {
+                                                "qualityCharacteristicCodeType": "095",
+                                                "qualityCharacteristicValue": "29.7",
+                                                "qualityCharacteristicUnit": "P1",
+                                                "qualityCharacteristicDelInd": false,
+                                                "qualityCharacteristicDescription": "Palmitinezuur C16:0",
+                                                "milkQualityLinePenaltyPoints": "00",
+                                                "milkQualityLineStatusCode": "1",
+                                                "milkQualityLineRemark": "000",
+                                                "milkQualityLineCalculatedIndicatorCode": "0"
+                                            },
+                                            {
+                                                "qualityCharacteristicCodeType": "096",
+                                                "qualityCharacteristicValue": "9.0",
+                                                "qualityCharacteristicUnit": "P1",
+                                                "qualityCharacteristicDelInd": false,
+                                                "qualityCharacteristicDescription": "Stearinezuur C18:0",
+                                                "milkQualityLinePenaltyPoints": "00",
+                                                "milkQualityLineStatusCode": "1",
+                                                "milkQualityLineRemark": "000",
+                                                "milkQualityLineCalculatedIndicatorCode": "0"
+                                            },
+                                            {
+                                                "qualityCharacteristicCodeType": "097",
+                                                "qualityCharacteristicValue": "23.6",
+                                                "qualityCharacteristicUnit": "P1",
+                                                "qualityCharacteristicDelInd": false,
+                                                "qualityCharacteristicDescription": "Oliezuur C18:1",
+                                                "milkQualityLinePenaltyPoints": "00",
+                                                "milkQualityLineStatusCode": "1",
+                                                "milkQualityLineRemark": "000",
+                                                "milkQualityLineCalculatedIndicatorCode": "0"
+                                            },
+                                            {
+                                                "qualityCharacteristicCodeType": "098",
+                                                "qualityCharacteristicValue": "102",
+                                                "qualityCharacteristicUnit": "MGM100GRM",
+                                                "qualityCharacteristicDelInd": false,
+                                                "qualityCharacteristicDescription": "Fosfor",
+                                                "milkQualityLinePenaltyPoints": "00",
+                                                "milkQualityLineStatusCode": "1",
+                                                "milkQualityLineRemark": "000",
+                                                "milkQualityLineCalculatedIndicatorCode": "0"
+                                            },
+                                            {
+                                                "qualityCharacteristicCodeType": "005",
+                                                "qualityCharacteristicValue": "0",
+                                                "qualityCharacteristicUnit": "",
+                                                "qualityCharacteristicDelInd": false,
+                                                "qualityCharacteristicDescription": "Boterzuursporen",
+                                                "milkQualityLinePenaltyPoints": "00",
+                                                "milkQualityLineStatusCode": "1",
+                                                "milkQualityLineRemark": "001",
+                                                "milkQualityLineCalculatedIndicatorCode": "0"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}
