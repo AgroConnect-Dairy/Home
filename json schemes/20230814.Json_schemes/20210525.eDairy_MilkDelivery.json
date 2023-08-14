@@ -1,0 +1,69 @@
+{
+  "data": [{
+      "dairyCompany": {
+      "dairyCompanyIdentifier": {
+        "scheme": " ",       
+        "id": " "
+      },
+      "dairyCompanySecondaryIdentifier": {
+        "scheme": " ",
+        "id": " "
+      },
+      "milkProductionLocation": [
+        {
+          "milkProductionLocationIdentifier": {
+            "scheme": " ",
+            "id": " "
+          },
+          "milkProductionLocationSecondaryIdentifier": {
+            "scheme": " ",
+            "id": " "
+          },
+          "milkProductionLocationSecondaryIdentifiers": [
+          {
+            "scheme": " ",
+            "id": " "
+          }
+         ],
+          "milkTank": [
+            {
+              "milkTankIdentifier": {
+                "scheme": " ",
+                "id": " "
+              },
+              "milkDelivery": [
+                {
+                  "milkDeliveryId": " ",
+                  "milkDeliveryDateTime": " ",
+                  "milkDeliveryDelInd": " ",
+                  "milkDeliveredQuantity": [
+                    {
+                      "unitCode": " ",
+                      "value": " "
+                    }
+                  ],
+                  "factorLitersToKilogram": " ",
+                  "milkTemperature": {
+                    "value": " ",
+                    "unitOfMeasure": " "
+                  },
+                  "remark": " ",
+                  "quantityLine": [
+                    {
+                      "quantityCharacteristicCode": " ",
+                      "quantityCharacteristicDelInd": " ",
+                      "quantityCharacteristicValue": " ",
+                      "quantityCharacteristicUnit": " ",
+                      "quantityCharacteristicDescription": " "
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+ ]
+}
