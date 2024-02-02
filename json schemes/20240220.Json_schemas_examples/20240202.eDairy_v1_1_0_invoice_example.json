@@ -1,0 +1,143 @@
+{
+	"@xmlns:xs": "http://www.w3.org/2001/XMLSchema",
+	"data": {
+		"dairyCompany": [
+			{
+				"dairyCompanyIdentifier": {
+					"scheme": "nl.ubn",
+					"id": "String"
+				},
+				"dairyCompanySecondaryIdentifiers": [
+					{
+						"scheme": "nl.ubn",
+						"id": "String"
+					}
+				],
+				"milkProductionLocation": [
+					{
+						"milkProductionLocationIdentifier": {
+							"scheme": "nl.ubn",
+							"id": "String"
+						},
+						"milkProductionLocationSecondaryIdentifiers": [
+							{
+								"scheme": "nl.ubn",
+								"id": "String"
+							}
+						],
+						"invoice": [
+							{
+								"invoiceIid": "String",
+								"invoiceDateTime": "String",
+								"invoiceDescription": "String",
+								"currencyCode": "EUR",
+								"invoicePeriodId": "String",
+								"invoicePeriodStartDate": "String",
+								"invoicePeriodEndDate": "String",
+								"totalPaymentVatExcluded": 0.1,
+								"totalVat": 0.1,
+								"totalMilkRelatedAmountVatExcluded": 0.1,
+								"totalPaymentVatIncluded": 0.1,
+								"remark": "String",
+								"invoiceLine": [
+									{
+										"amountVatExcluded": 0.1,
+										"amountVatIncluded": 0.1,
+										"dairyCompanyReferenceId": "String",
+										"description": "String",
+										"discountPer100Ltr": 0.1,
+										"itemCode": "String",
+										"kindOfPaymentCode": "0",
+										"ledgerAccountNumber": "String",
+										"milkDeliveryReferenceId": "String",
+										"paymentPeriodEndDate": "String",
+										"paymentPeriodStartDate": "String",
+										"pricePerUnitVatExcluded": 0.1,
+										"quantity": "String",
+										"quantityUnit": "KGM",
+										"remark": "String",
+										"unitBaseQuantity": -2147483648,
+										"unitForPricePerUnitCode": "KGM",
+										"vatAmount": 0.1,
+										"vatPercentage": 0.1,
+										"invoiceReferencedCharacteristic": [
+											{
+												"invoiceRefererencedCharacteristicCode": "1",
+												"invoiceCharacteristicValue": "String",
+												"invoiceCharacteristicUnit": "String",
+												"invoiceCharacteristicDescription": "String",
+												"invoiceCharacteristicVolume": "String",
+												"invoiceCharacteristicVolumeUnit": "String",
+												"invoiceCharacteristicWeight": "String",
+												"invoiceCharacteristicWeightUnit": "String"
+											}
+										]
+									}
+								],
+								"invoiceReferencedCharacteristic": [
+									{
+										"invoiceRefererencedCharacteristicCode": "1",
+										"invoiceCharacteristicValue": "String",
+										"invoiceCharacteristicUnit": "String",
+										"invoiceCharacteristicDescription": "String",
+										"invoiceCharacteristicVolume": "String",
+										"invoiceCharacteristicVolumeUnit": "String",
+										"invoiceCharacteristicWeight": "String",
+										"invoiceCharacteristicWeightUnit": "String"
+									}
+								],
+								"milkDeliveryReferenceId": [
+									"String"
+								]
+							}
+						],
+						"milkTank": [
+							{
+								"milkTankIdentifier": {
+									"scheme": "nl.ubn",
+									"id": "String"
+								}
+							}
+						],
+						"partyCharacteristic": {
+							"cityName": "String",
+							"cityNamePostBox": "String",
+							"countryCode": "NL",
+							"countryCodePostBox": "String",
+							"emailAddress": "String",
+							"iban": "String",
+							"name": "String",
+							"personToContact": "String",
+							"phoneNumber": "String",
+							"postBoxNumber": "String",
+							"postalCodeLocation": "String",
+							"postalCodePostBox": "String",
+							"streetNameAndNumber": "String",
+							"telefaxNumber": "String",
+							"url": "String",
+							"vat_Number": "String"
+						}
+					}
+				],
+				"partyCharacteristic": {
+					"cityName": "String",
+					"cityNamePostBox": "String",
+					"countryCode": "NL",
+					"countryCodePostBox": "String",
+					"emailAddress": "String",
+					"iban": "String",
+					"name": "String",
+					"personToContact": "String",
+					"phoneNumber": "String",
+					"postBoxNumber": "String",
+					"postalCodeLocation": "String",
+					"postalCodePostBox": "String",
+					"streetNameAndNumber": "String",
+					"telefaxNumber": "String",
+					"url": "String",
+					"vat_Number": "String"
+				}
+			}
+		]
+	}
+}
