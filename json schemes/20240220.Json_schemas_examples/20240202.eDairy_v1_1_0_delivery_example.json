@@ -55,7 +55,7 @@
 											{
 												"quantityCharacteristicCode": "1",
 												"quantityCharacteristicDelInd": true,
-												"quantityCharacteristicValue": 0.1,
+												"quantityCharacteristicValue": "String",
 												"quantityCharacteristicUnit": "String",
 												"qualityCharacteristicDescription": "String"
 											}

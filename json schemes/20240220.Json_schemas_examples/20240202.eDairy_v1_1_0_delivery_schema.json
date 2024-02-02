@@ -517,8 +517,7 @@
 					"$ref": "#/definitions/xs:boolean"
 				},
 				"quantityCharacteristicValue": {
-					"description": "The quantity of fat, protein, lactose or ureum.",
-					"$ref": "#/definitions/xs:double"
+					"$ref": "#/definitions/xs:string"
 				},
 				"quantityCharacteristicUnit": {
 					"description": "The unit used to express the delivered quantity.",
