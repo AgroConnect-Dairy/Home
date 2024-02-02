@@ -53,7 +53,7 @@
 										"paymentPeriodEndDate": "String",
 										"paymentPeriodStartDate": "String",
 										"pricePerUnitVatExcluded": 0.1,
-										"quantity": "String",
+										"quantity": 0.1,
 										"quantityUnit": "KGM",
 										"remark": "String",
 										"unitBaseQuantity": -2147483648,

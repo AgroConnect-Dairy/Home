@@ -271,8 +271,7 @@
 					"$ref": "#/definitions/xs:double"
 				},
 				"quantity": {
-					"description": "The quantity of the item this invoice line relates to.\nDutch reference: ADED 202435 .",
-					"$ref": "#/definitions/xs:string"
+					"$ref": "#/definitions/xs:float"
 				},
 				"quantityUnit": {
 					"$ref": "#/definitions/measurementUnitCodeType"
