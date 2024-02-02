@@ -1,0 +1,72 @@
+{
+	"@xmlns:xs": "http://www.w3.org/2001/XMLSchema",
+	"data": {
+		"dairyCompany": [
+			{
+				"dairyCompanyIdentifier": {
+					"scheme": "nl.ubn",
+					"id": "String"
+				},
+				"dairyCompanySecondaryIdentifiers": [
+					{
+						"scheme": "nl.ubn",
+						"id": "String"
+					}
+				],
+				"milkProductionLocation": [
+					{
+						"milkProductionLocationIdentifier": {
+							"scheme": "nl.ubn",
+							"id": "String"
+						},
+						"milkProductionLocationSecondaryIdentifiers": [
+							{
+								"scheme": "nl.ubn",
+								"id": "String"
+							}
+						],
+						"milkTank": [
+							{
+								"milkTankIdentifier": {
+									"scheme": "nl.ubn",
+									"id": "String"
+								},
+								"milkDelivery": [
+									{
+										"milkDeliveryId": {
+											"scheme": "nl.ubn",
+											"id": "String"
+										},
+										"milkDeliveryDateTime": "String",
+										"milkDeliveryDelInd": true,
+										"milkDeliveredQuantity": [
+											{
+												"unitCode": "KGM",
+												"value": 0.1
+											}
+										],
+										"factorLitresToKilogram": 0.1,
+										"milkTemperature": {
+											"unitOfMeasure": "KGM",
+											"value": 0.1
+										},
+										"remark": "String",
+										"quantityLine": [
+											{
+												"quantityCharacteristicCode": "1",
+												"quantityCharacteristicDelInd": true,
+												"quantityCharacteristicValue": 0.1,
+												"quantityCharacteristicUnit": "String",
+												"qualityCharacteristicDescription": "String"
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+}
