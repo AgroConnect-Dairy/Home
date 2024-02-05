@@ -1,0 +1,43 @@
+{
+   "data":
+	  [
+      {
+         "dairyCompany":
+		 {
+            "dairyCompanyIdentifier":
+			{
+               "scheme":"string",
+               "id":"string",
+			   "version":"string"
+            },
+            "dairyCompanyMilkCharacteristics":
+			[
+               {
+				   "month": "number",
+				   "year": "number",
+				    "dairyCompanyMilkCharacteristicline":
+					[
+					{
+						"companyCharacteristicCodeListId": "string",
+						"companyCharacteristicCodeType": "string",
+						"companyCharacteristicCodeStatute": "string",
+						"companyCharacteristicCodeName": "string",
+						"companyCharacteristicCodeValue": "number",
+						"companyCharacteristicCodeUnit": "string"
+					},
+					{
+						"companyCharacteristicCodeListId": "string",						
+						"companyCharacteristicCodeType": "string",
+						"companyCharacteristicCodeStatute": "string",
+						"companyCharacteristicCodeName": "string",
+						"companyCharacteristicCodeValue": "number",
+						"companyCharacteristicCodeUnit": "string"
+					},
+					]
+         
+				},
+				]
+		}
+	  },
+	  ]
+}
