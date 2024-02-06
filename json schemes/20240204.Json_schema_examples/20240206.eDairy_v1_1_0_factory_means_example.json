@@ -1,0 +1,35 @@
+{
+	"@xmlns:xs": "http://www.w3.org/2001/XMLSchema",
+	"data": {
+		"dairyCompany": [
+			{
+				"dairyCompanyIdentifier": {
+					"id": "String",
+					"scheme": "nl.ubn"
+				},
+				"dairyCompanyMilkCharacteristics": [
+					{
+						"dairyCompanyMilkCharacteristicLine": [
+							{
+								"companyCharacteristicCodeListId": "String",
+								"companyCharacteristicCodeName": "String",
+								"companyCharacteristicCodeStatute": "String",
+								"companyCharacteristicCodeType": "String",
+								"companyCharacteristicCodeUnit": "String",
+								"companyCharacteristicCodeValue": "String"
+							}
+						],
+						"month": -2147483648,
+						"year": -2147483648
+					}
+				],
+				"dairyCompanySecondaryIdentifiers": [
+					{
+						"id": "String",
+						"scheme": "nl.ubn"
+					}
+				]
+			}
+		]
+	}
+}

@@ -1,0 +1,175 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"additionalProperties": false,
+	"definitions": {
+		".data": {
+			"$ref": "#/definitions/data"
+		},
+		"dairyCompany": {
+			"additionalProperties": false,
+			"description": "The dairy company that processes the milk.",
+			"properties": {
+				"dairyCompanyIdentifier": {
+					"$ref": "#/definitions/partyIdType",
+					"description": "Within the scope of this data exchange, unique identifier of this dairy company.\nIn the Netherlands: Fabrieksnummer."
+				},
+				"dairyCompanyMilkCharacteristics": {
+					"items": {
+						"$ref": "#/definitions/dairyCompanyMilkCharacteristics"
+					},
+					"minItems": 1,
+					"type": "array"
+				},
+				"dairyCompanySecondaryIdentifiers": {
+					"items": {
+						"$ref": "#/definitions/partyIdType",
+						"description": "The option to add an extra, secondary, identifier of this dairy company, e.g. a GLN."
+					},
+					"type": "array"
+				}
+			},
+			"required": [
+				"dairyCompanyIdentifier",
+				"dairyCompanyMilkCharacteristics"
+			],
+			"type": "object"
+		},
+		"dairyCompanyMilkCharacteristicLine": {
+			"additionalProperties": false,
+			"description": "Key figure determined by the dairy company that is applicable for the dairy company as a whole and are not specific for individual dairy farms.\nE.g.: average for a specific period for a specific dairy plant. ",
+			"properties": {
+				"companyCharacteristicCodeListId": {
+					"$ref": "#/definitions/xs:string",
+					"description": "Identifier of the code list that is used for this company characteristic. For The Netherlands, AgroConnect code list nl.cl780 is to be used."
+				},
+				"companyCharacteristicCodeName": {
+					"$ref": "#/definitions/xs:string"
+				},
+				"companyCharacteristicCodeStatute": {
+					"$ref": "#/definitions/xs:string",
+					"description": "Indicates whether it concerns regular (REG) milk or organic (BIO) milk."
+				},
+				"companyCharacteristicCodeType": {
+					"$ref": "#/definitions/xs:string",
+					"description": "Code referring to a key figure that is applicable for the dairy company as a whole and is not specific for individual dairy farms. For The Netherlands, AgroConnect code list nl.cl780 is to be used."
+				},
+				"companyCharacteristicCodeUnit": {
+					"$ref": "#/definitions/xs:string",
+					"description": "Unit of measurement for a key figure that is applicable for the dairy company as a whole and is not specific for individual dairy farms. For UoM AgroConnect code list nl.cl020 is used. "
+				},
+				"companyCharacteristicCodeValue": {
+					"$ref": "#/definitions/xs:string",
+					"description": "Value of a key figure that is applicable for the dairy company as a whole and is not specific for individual dairy farms. "
+				}
+			},
+			"required": [
+				"companyCharacteristicCodeListId",
+				"companyCharacteristicCodeType",
+				"companyCharacteristicCodeUnit",
+				"companyCharacteristicCodeValue"
+			],
+			"type": "object"
+		},
+		"dairyCompanyMilkCharacteristics": {
+			"additionalProperties": false,
+			"description": "Key figures determined by the dairy company that are applicable for the dairy company as a whole and are not specific for individual dairy farms.\nE.g.: averages for a specific period for a specific dairy plant. ",
+			"properties": {
+				"dairyCompanyMilkCharacteristicLine": {
+					"items": {
+						"$ref": "#/definitions/dairyCompanyMilkCharacteristicLine"
+					},
+					"minItems": 1,
+					"type": "array"
+				},
+				"month": {
+					"$ref": "#/definitions/xs:int",
+					"description": "A specific month within the year these key figures apply to."
+				},
+				"year": {
+					"$ref": "#/definitions/xs:int",
+					"description": "The year these key figures apply to."
+				}
+			},
+			"required": [
+				"dairyCompanyMilkCharacteristicLine",
+				"month",
+				"year"
+			],
+			"type": "object"
+		},
+		"data": {
+			"additionalProperties": false,
+			"description": "The root of the hierarchical structured data set.",
+			"properties": {
+				"dairyCompany": {
+					"items": {
+						"$ref": "#/definitions/dairyCompany"
+					},
+					"minItems": 1,
+					"type": "array"
+				}
+			},
+			"required": [
+				"dairyCompany"
+			],
+			"type": "object"
+		},
+		"partyIdType": {
+			"additionalProperties": false,
+			"description": "Standard data segment for the unique identifier of a party.",
+			"properties": {
+				"id": {
+					"$ref": "#/definitions/xs:string",
+					"description": "The value of the party identifier."
+				},
+				"scheme": {
+					"$ref": "#/definitions/partySchemeCodeType",
+					"description": "Indicator of what type of identifier is used to identify the party. E.g., a GLN, KvK, customer ID, etc."
+				}
+			},
+			"required": [
+				"id",
+				"scheme"
+			],
+			"type": "object"
+		},
+		"partySchemeCodeType": {
+			"description": "schemaID = nl.cl709:\n\nnl.ubn = uniek bedrijfsnummer \nnl.kvk = Kamer van Koophandel nummer \nnl.plnt = fabrieksnummer \nnl.brs = bedrijfsregistratienummer \ngln = global location number GS1 \nbe.pen = productieeenheidnummer België \nnl.ftn = fabrieksnummer + tanknummer \nnl.memnr = lidnummer \nnl.notsp = not specified \nnl.tnk = tanknummer \nnl.ref = allocated by generating party \nnl.vat = btw-nummer \nnl.skal = skal nummer \ncusnr = klantnummer",
+			"enum": [
+				"nl.ubn",
+				"nl.kvk",
+				"nl.plnt",
+				"nl.brs",
+				"gln",
+				"be.pen",
+				"nl.ftn",
+				"nl.memnr",
+				"nl.notsp",
+				"nl.tnk",
+				"nl.ref",
+				"nl.vat",
+				"nl.skal",
+				"cusnr"
+			],
+			"type": "string"
+		},
+		"xs:int": {
+			"maximum": 2147483647,
+			"minimum": -2147483648,
+			"type": "integer"
+		},
+		"xs:string": {
+			"type": "string"
+		}
+	},
+	"description": "JSON Schema generated by XMLSpy v2023 (x64) (http://www.altova.com)",
+	"properties": {
+		"@xmlns:xs": {
+			"default": "http://www.w3.org/2001/XMLSchema"
+		},
+		"data": {
+			"$ref": "#/definitions/.data"
+		}
+	},
+	"type": "object"
+}
