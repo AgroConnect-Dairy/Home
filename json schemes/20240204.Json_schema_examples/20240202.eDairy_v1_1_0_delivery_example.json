@@ -45,7 +45,7 @@
 										"factorLitresToKilogram": 0.1,
 										"milkTemperature": {
 											"value": 0.1,
-											"unitOfMeasure": "KGM"
+											"unitOfMeasure": "CEL"
 										},
 										"remark": "String",
 										"quantityLine": [
